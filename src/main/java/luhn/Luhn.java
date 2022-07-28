@@ -19,10 +19,10 @@ public class Luhn {
      * @return The check digit for the given number.
      */
     public int generateCheckDigit(String number) {
-        if(number.length() <= 1 || calculate(number, true) == -1) {
+        int total = calculate(number, true);
+        if(total == -1 || number.length() <= 1) {
             return -1;
         }
-        int total = calculate(number, true);
         return total % 10 == 0 ? 0 : 10 - total % 10;
     }
 
