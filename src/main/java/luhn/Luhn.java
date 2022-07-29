@@ -40,10 +40,8 @@ public class Luhn {
             int digit = number.charAt(i) - '0';
             if(flag) {
                 digit = digit * 2 > 9 ? (digit * 2) - 9 : digit * 2;
-                flag = !flag;
-            } else {
-                flag = !flag;
             }
+            flag = !flag;
             total += digit;
         }
         return total;
