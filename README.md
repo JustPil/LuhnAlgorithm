@@ -1,9 +1,11 @@
 # LuhnAlgorithm
 Summary
+
 The Luhn Algorithm is used to validate identification numbers against accidental errors with its digits.
 This program validates a full number including its check digit, or generates a check digit for a number.
 
 Design
+
 To validate a number, the algorithm starts at the rightmost digit (the check digit) and moves left once. From this position just left of the check digit, 
 double every second digit. Should a doubled digit exceed one digit, sum its digits.
 Example: digit 6, when doubled, is 12. To sum its digits, 12 becomes 1 + 2 = 3.
